@@ -33,6 +33,7 @@ backgroundColor:'#FFC107',
   },
   commentFormAuthor: {
     fontFamily:'Courier New, Courier, monospace',
+    fontSize:'.85rem',
     minWidth:'150px',
     margin:'3px',
     padding:'0 10px',
@@ -42,6 +43,7 @@ backgroundColor:'#FFC107',
   },
   commentFormText: {
     fontFamily:'Courier New, Courier, monospace',
+    fontSize:'.85rem',
     color:'#5E5C53',
     flex:'4',
     minWidth:'400px',
@@ -64,14 +66,14 @@ backgroundColor:'#FFC107',
   },
   updateLink: {
     textDecoration:'none',
+    fontSize:'.85rem',
     paddingRight:'15px',
-    fontSize:'.7rem',
     color:'#00796B'
   },
   deleteLink: {
     textDecoration:'none',
+    fontSize:'.85rem',
     paddingRight:'15px',
-    fontSize:'.7rem',
     color:'#212121'
   }
 }
