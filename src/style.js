@@ -1,21 +1,26 @@
 const style = {
+backgroundColor:'#FFC107',
   commentBox: {
+    color:"#5E5C53",
     width:'80vw',
     margin:'0 auto',
-    fontFamily:'Helvetica, sans-serif'
+    fontFamily:'Courier New, Courier, monospace'
   },
   title: {
     textAlign:'center',
     textTransform:'uppercase'
   },
   commentList: {
+    borderRadius: '10px',
+    backgroundColor: '#BDBDBD',
     border:'1px solid #f1f1f1',
     padding:'0 12px',
     maxHeight:'70vh',
     overflow:'scroll'
   },
   comment: {
-    backgroundColor:'#fafafa',
+    borderRadius: '10px',
+    backgroundColor:'#B2DFDB',
     margin:'10px',
     padding:'3px 10px',
     fontSize:'.85rem'
@@ -27,6 +32,7 @@ const style = {
     justifyContent:'space-between'
   },
   commentFormAuthor: {
+    fontFamily:'Courier New, Courier, monospace',
     minWidth:'150px',
     margin:'3px',
     padding:'0 10px',
@@ -35,6 +41,8 @@ const style = {
     flex:'2'
   },
   commentFormText: {
+    fontFamily:'Courier New, Courier, monospace',
+    color:'#5E5C53',
     flex:'4',
     minWidth:'400px',
     margin:'3px',
@@ -48,23 +56,23 @@ const style = {
     height:'40px',
     margin:'5px 3px',
     fontSize:'1rem',
-    backgroundColor:'#A3CDFD',
+    backgroundColor:'#FFC107',
     borderRadius:'3px',
-    color:'#fff',
-    textTransform:'uppercase',
+    color:'white',
     letterSpacing:'.055rem',
     border:'none'
   },
   updateLink: {
     textDecoration:'none',
     paddingRight:'15px',
-    fontSize:'.7rem'
+    fontSize:'.7rem',
+    color:'#00796B'
   },
   deleteLink: {
     textDecoration:'none',
     paddingRight:'15px',
     fontSize:'.7rem',
-    color:'red'
+    color:'#212121'
   }
 }
 

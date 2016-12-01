@@ -43,7 +43,7 @@ class CommentForm extends Component {
         <input
           type='submit'
           style={ style.commentFormPost }
-          value='Post'/>
+          value='post'/>
       </form>
     )
   }
