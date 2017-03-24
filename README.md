@@ -227,7 +227,7 @@ Check out the Comment Schema in Models.
 What are the properties of this? What are their types?
 Check to make sure we've required this model in `server.js`.
 
-### 3. Procfile 
+### Part 3. Check out the Procfile and serving setup
 
 Notice the contents of your Procfile:
 
@@ -252,6 +252,9 @@ Check out how we've set up what to serve in our package.json:
 This lets us us `npm run start-dev` from terminal to start both the React app and the API - Neato!
 
 ![cat](https://media.giphy.com/media/3oz8xQQP4ahKiyuxHy/giphy.gif)
+
+### Part 4. GET and POST
+
 
 
 
