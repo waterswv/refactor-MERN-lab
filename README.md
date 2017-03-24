@@ -56,6 +56,39 @@ Take a look at `package.json`. What is familiar? What's new?
 * Axios is a library that will let us use HTTP methods to communicate with our database.
 * Foreman allows us to boot up our API and webpack-dev-server simultaneously.
 
+### Components!
+
+Let's go ahead and create some components!
+
+We'll need a basic comment box:
+
+```js
+//CommentBox.js
+import React, { Component } from 'react';
+import CommentList from './CommentList';
+import CommentForm from './CommentForm';
+import DATA from '../data';
+import style from './style';
+
+class CommentBox extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { data: [] };
+  }
+  render() {
+    return (
+      <div style={ style.commentBox }>
+        <h2>Comments:</h2>
+      <CommentList data={ DATA }/>
+      <CommentForm />
+      </div>
+    )
+  }
+}
+
+export default CommentBox;
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 * tutorial from https://github.com/bryantheastronaut/mernCommentBox__
