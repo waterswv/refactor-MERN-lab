@@ -14,7 +14,8 @@ var app = express(),
 var port = process.env.API_PORT || 3001;
 
 //db config
-mongoose.connect('mongodb://jeanBot:noodles@ds115738.mlab.com:15738/mern-comment-box');
+//ADD YOUR INFO HERE!
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds115738.mlab.com:15738/mern-comment-box');
 
 //config API to use bodyParser and look for JSON in req.body
 app.use(bodyParser.urlencoded({extended: true }));
