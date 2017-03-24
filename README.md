@@ -218,7 +218,7 @@ You'll need to go to MLabs (https://mlab.com/). Sign up if you haven't already.
 Once you have a username and password, we can integrate it into our server.js file.
 On your MLab page, you should see something such as this at the top:
 
-!(img4.png)[img4.png]
+![img4.png](img4.png)
 
 You'll need the "using a driver via the standard MongoDB URI" option. Copy this into your server.js as shown in the code snippet above.
 
