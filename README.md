@@ -305,6 +305,51 @@ router.route('/comments')
 
 Looking good.
 
+Now, we have to render our URL prop in `index.js` and set a poll interval to check for updates:
+
+```js
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import CommentBox from './CommentBox';
+
+ReactDOM.render(
+  <CommentBox
+    url='http://localhost:3001/api/comments'
+    pollInterval={2000} />,
+  document.getElementById('root')
+);
+```
+
+Next, let's change CommentBox.js to reflect our real data instead of the hard-coded imported stuff:
+
+```js
+//CommentBox.js
+import React, { Component } from 'react';
+import CommentList from './CommentList';
+import CommentForm from './CommentForm';
+import style from './style';
+
+class CommentBox extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { data: [] };
+  }
+  render() {
+    return (
+      <div style={ style.commentBox }>
+        <h2>Comments:</h2>
+      <CommentList data={ this.state.data }/>
+      <CommentForm />
+      </div>
+    )
+  }
+}
+
+export default CommentBox;
+```
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
