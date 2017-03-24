@@ -20,6 +20,7 @@ So far, we've delved into basic React app frontend architecture. Now, let's take
 
 This guide will walk you through a scaffolded MERN stack app - you'll be focusing mainly on the React part of MERN. Definitely take some time during the lab to check out what's going on in `server.js` and re-familiarize yourself with express routing.
 
+
 Clone this repo down and take a look at the file structure.
 
 *Note: If you were to create this React app from scratch, you would be using the command create-react-app mern-comment-box.*
@@ -56,7 +57,7 @@ Take a look at `package.json`. What is familiar? What's new?
 * Axios is a library that will let us use HTTP methods to communicate with our database.
 * Foreman allows us to boot up our API and webpack-dev-server simultaneously.
 
-### Components!
+### Part 1: Components!
 
 Let's go ahead and create some components!
 
@@ -199,6 +200,110 @@ export default CommentForm;
 Take a moment to review these components. When is `state` used? when is `props` used? Which components are most associated with which CRUD actions?
 
 Now take a peek at `data.js`. We've provided a few entries for you. Feel free to add some more entries to seed your project.
+
+Go ahead and run `nodemon` and see what we have so far.
+
+### Part 2: The DB
+
+Check out `server.js`. Notice the mongoose connection?
+
+```
+//db config
+//ADD YOUR INFO HERE!
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds115738.mlab.com:15738/mern-comment-box');
+```
+
+You'll need to go to MLabs (https://mlab.com/). Sign up if you haven't already. 
+
+Once you have a username and password, we can integrate it into our server.js file.
+On your MLab page, you should see something such as this at the top:
+
+![img4.png](img4.png)
+
+You'll need the "using a driver via the standard MongoDB URI" option. Copy this into your server.js as shown in the code snippet above.
+
+Check out the Comment Schema in Models. 
+
+What are the properties of this? What are their types?
+Check to make sure we've required this model in `server.js`.
+
+### Part 3. Check out the Procfile and serving setup
+
+Notice the contents of your Procfile:
+
+```
+//Procfile
+web: react-scripts start
+api: nodemon server.js
+```
+
+This allows us to use Foreman properly for our scripts.
+
+Check out how we've set up what to serve in our package.json:
+
+```
+//package.json
+//...
+    "start": "react-scripts start",
+    "start-dev": "nf start -p 3000",
+//...
+```
+
+This lets us us `npm run start-dev` from terminal to start both the React app and the API - Neato!
+
+![cat](https://media.giphy.com/media/3oz8xQQP4ahKiyuxHy/giphy.gif)
+
+### Part 4. GET and POST
+
+Time for some CRUD!
+
+Let's re-open `server.js`. You should have some `GET` an `DELETE` routing already scaffolded:
+
+```js
+//set route path and init API
+router.get('/', function(req,res) {
+  res.json({message: 'API Initialized!'});
+});
+
+// delete all comments
+router.route('/nuke').get(function(req,res){
+  Comment.remove(function(err,succ){
+  res.json(succ);
+  });
+});
+```
+
+Now let's add some functionality for getting and posting:
+
+```js
+//adding the /comments route to our /api router
+router.route('/comments')
+  //retrieve all comments from the database
+  .get(function(req, res) {
+    //looks at our Comment Schema
+    Comment.find(function(err, comments) {
+      if (err)
+        res.send(err);
+      //responds with a json object of our database comments.
+      res.json(comments)
+    });
+  })
+  //post new comment to the database
+  .post(function(req, res) {
+    var comment = new Comment();
+    //body parser lets us use the req.body
+    comment.author = req.body.author;
+    comment.text = req.body.text;
+
+    comment.save(function(err) {
+      if (err)
+        res.send(err);
+      res.json({ message: 'Comment successfully added!' });
+    });
+  });
+```
+
+Looking good.
 
 
 
