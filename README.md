@@ -60,7 +60,7 @@ Take a look at `package.json`. What is familiar? What's new?
 
 ## Sprints
 
-####Sprint 1
+#### Sprint 1
 
 [Sprint 1: Component Setup](docs/Sprint1.md)
 
