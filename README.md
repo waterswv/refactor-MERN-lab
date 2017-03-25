@@ -20,7 +20,7 @@ So far, we've delved into basic React app frontend architecture. Now, let's take
 
 This guide will walk you through a scaffolded MERN stack app - you'll be focusing mainly on the React part of MERN. Definitely take some time during the lab to check out what's going on in `server.js` and re-familiarize yourself with express routing.
 
-##Setup
+## Setup
 
 Clone this repo down and take a look at the file structure.
 
@@ -79,7 +79,9 @@ Take a look at `package.json`. What is familiar? What's new?
 #### Sprint 5
 
  [Sprint 5: AJAX with Axios](docs/Sprint5.md)
- 
+
 #### Sprint 6
- 
+
  [Sprint 5: the UD](docs/Sprint6.md)
+
+*more info: https://github.com/bryantheastronaut/mernCommentBox__*
