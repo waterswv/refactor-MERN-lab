@@ -51,6 +51,10 @@ router.route('/comments')
 
 Looking good.
 
+If we check our /api/comments endpoint now, we'll notice we don't see any comments. This is because the DB is empty!
+
+Use Postman to POST a few comments to our api endpoint at `http://localhost:3001/api/comments`.
+
 Now, we have to render our URL prop in `index.js` and set a poll interval to check for updates:
 
 ```js
@@ -67,7 +71,9 @@ ReactDOM.render(
 );
 ```
 
-Next, let's change CommentBox.js to reflect our real data instead of the hard-coded imported stuff:
+Now back to some React and network calls.
+
+Let's change CommentBox.js to reflect our real data instead of the hard-coded imported stuff:
 
 ```js
 //CommentBox.js

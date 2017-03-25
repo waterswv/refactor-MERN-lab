@@ -58,12 +58,28 @@ Take a look at `package.json`. What is familiar? What's new?
 * Axios is a library that will let us use HTTP methods to communicate with our database.
 * Foreman allows us to boot up our API and webpack-dev-server simultaneously.
 
-####[Sprint 1: Component Setup](docs/Sprint1.md)
+##Sprints
 
-####[Sprint 2: Database Configuration](docs/Sprint2.md)
+####Sprint 1
 
-####[Sprint 3: Procfile and Serving](docs/Sprint3.md)
+[Sprint 1: Component Setup](docs/Sprint1.md)
 
-####[Sprint 4: GET and POST setup](docs/Sprint4.md)
+####Sprint 2
 
-####[Sprint 5: ](docs/Sprint5.md)
+ [Sprint 2: Database Configuration](docs/Sprint2.md)
+
+####Sprint 3
+
+ [Sprint 3: Procfile and Serving](docs/Sprint3.md)
+
+####Sprint 4
+
+ [Sprint 4: GET and POST](docs/Sprint4.md)
+
+####Sprint 5
+
+ [Sprint 5: AJAX with Axios](docs/Sprint5.md)
+ 
+####Sprint 6
+ 
+ [Sprint 5: ](docs/Sprint6.md)
