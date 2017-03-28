@@ -58,6 +58,8 @@ Take a look at `package.json`. What is familiar? What's new?
 * Axios is a library that will let us use HTTP methods to communicate with our database.
 * Foreman allows us to boot up our API and webpack-dev-server simultaneously.
 
+![screenshot.png](screenshot.png)
+
 ## Sprints
 
 #### Sprint 1
