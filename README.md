@@ -92,6 +92,6 @@ You will also notice that we're using a .js file for our styles, which has been 
  
  
 
-*more info: https://facebook.github.io/react/tutorial/tutorial.html*
+###### *more info: https://facebook.github.io/react/tutorial/tutorial.html*
 
-*https://github.com/bryantheastronaut/mernCommentBox__*
+###### *https://github.com/bryantheastronaut/mernCommentBox__*
