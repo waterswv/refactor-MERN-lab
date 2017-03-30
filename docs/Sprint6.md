@@ -271,7 +271,7 @@ class CommentForm extends Component {
 export default CommentForm;
 ```
 
-Whew! that was a lot of code. Congrats, you have completed your first MERN app!
+Whew! that was a lot of code. Congrats, you have completed a MERN app!
 
 ![yay](https://media0.giphy.com/media/11sBLVxNs7v6WA/200_s.gif)
 
