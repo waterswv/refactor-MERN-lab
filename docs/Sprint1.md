@@ -142,4 +142,4 @@ Take a moment to review these components. When is `state` used? when is `props` 
 
 Now take a peek at `data.js`. We've provided a few entries for you. Feel free to add some more entries to seed your project.
 
-Go ahead and run `nodemon` and see what we have so far.
+Go ahead and run `nodemon`. You should see an error! That's ok.
