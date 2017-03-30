@@ -2,7 +2,7 @@
 
 You guessed it, we still need UD.
 
-As with CR, we'll need to add the right routs to our `server.js`:
+As with CR, we'll need to add the right routes to our `server.js`:
 
 ```js
 router.route('/comments/:comment_id')
