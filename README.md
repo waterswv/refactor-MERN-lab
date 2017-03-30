@@ -58,6 +58,8 @@ Take a look at `package.json`. What is familiar? What's new?
 * Axios is a library that will let us use HTTP methods to communicate with our database.
 * Foreman allows us to boot up our API and webpack-dev-server simultaneously.
 
+You will also notice that we're using a .js file for our styles, which has been provided for you. This is known as *modular inline css styling* and is alternative way to add style. You could also have done this with a .css file.
+
 ![screenshot.png](screenshot.png)
 
 ## Sprints
@@ -86,4 +88,6 @@ Take a look at `package.json`. What is familiar? What's new?
 
  [Sprint 5: the UD](docs/Sprint6.md)
 
-*more info: https://github.com/bryantheastronaut/mernCommentBox__*
+*more info: https://facebook.github.io/react/tutorial/tutorial.html*
+
+*https://github.com/bryantheastronaut/mernCommentBox__*
