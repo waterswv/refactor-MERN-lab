@@ -88,10 +88,3 @@ You will also notice that we're using a .js file for our styles, which has been 
 
  [Sprint 5: the UD](docs/Sprint6.md)
  
- 
- 
- 
-
-###### *more info: https://facebook.github.io/react/tutorial/tutorial.html*
-
-###### *https://github.com/bryantheastronaut/mernCommentBox__*
