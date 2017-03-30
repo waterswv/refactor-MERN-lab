@@ -20,6 +20,8 @@ Check out how we've set up what to serve in our package.json:
 //...
 ```
 
-This lets us us `npm run start-dev` from terminal to start both the React app and the API - Neato!
+This lets us use `npm run start-dev` from terminal to start both the React app and the API. - Neato!
+
+So from now on in this tutorial, run `npm run start-dev` from terminal to start your app and the API.
 
 ![cat](https://media.giphy.com/media/3oz8xQQP4ahKiyuxHy/giphy.gif)
