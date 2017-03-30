@@ -111,7 +111,7 @@ handleCommentSubmit(comment) {
   axios.post(this.props.url, comment)
     .then(res => {
       this.setState({ data: res });
-    }).
+    })
     .catch(err => {
       console.error(err);
     });
