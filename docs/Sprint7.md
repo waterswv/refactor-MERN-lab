@@ -18,7 +18,7 @@ https://mern-comment-box-api.herokuapp.com/comments
 
 
 
-Now, when we render our comment box, we can also use this:
+Now, when we render our comment box, we can use this:
 
 ```js
 ReactDOM.render(
