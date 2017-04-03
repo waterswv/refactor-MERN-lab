@@ -42,3 +42,5 @@ loadCommentsFromServer(){
 ```
 
 Now, you can run `npm start` to hit a real live backend!
+
+Now, note that the API code in our server.js is being replaced by the backend endpoint, so we no longer need that. Axios is taking care of hitting our backend for us! Feel free to refactor and/or remove the API portion of this lab to prove it to yourself.
