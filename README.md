@@ -86,5 +86,8 @@ You will also notice that we're using a .js file for our styles, which has been 
 
 #### Sprint 6
 
- [Sprint 5: the UD](docs/Sprint6.md)
- 
+ [Sprint 6: the UD](docs/Sprint6.md)
+
+ #### Sprint 7
+
+  [Sprint 7: ...with a real backend](docs/Sprint7.md)
