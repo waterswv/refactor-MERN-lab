@@ -16,16 +16,9 @@ https://mern-comment-box-api.herokuapp.com/comments
 
  Let's change our React app to hit this endpoint.
 
- In your server.js, comment out the mongoose connection - we no longer needed it.
 
- Next, set our api endpoint to be the Heroku backend:
 
-```js
-//use router config when we call /API
-app.use('https://mern-comment-box-api.herokuapp.com/comments', router);
-```
-
-And now, when we render our comment box, we can also use this:
+Now, when we render our comment box, we can also use this:
 
 ```js
 ReactDOM.render(
