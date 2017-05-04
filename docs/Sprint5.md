@@ -1,16 +1,14 @@
-### Sprint 5: AJAX with Axios
+### Sprint 5: AJAX
 
 
-Now we are going to use [Axios](https://github.com/mzabriskie/axios), a nice network library that makes our code very clean. 
+Now we are going to use `jquery-ajax`, a node package that has *just* the AJAX methods from `jquery`.
 
-*Note: you could also use JQuery for this.*
-
-Here's what our CommentBox.js will look like with the `axios` get method:
+Here's what our CommentBox.js will look like with the AJAX call to get comments:
 
 ```js
 //CommentBox.js
 import React, { Component } from 'react';
-import axios from 'axios';
+import $ from 'jquery-ajax';
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
 import style from './style';
@@ -23,10 +21,15 @@ class CommentBox extends Component {
     this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
   }
   loadCommentsFromServer() {
-    axios.get(this.props.url)
-      .then(res => {
-        this.setState({ data: res.data });
-      })
+    $.ajax({
+      method: 'GET',
+      url: this.props.url
+    })
+    .then((res) => {
+      this.setState({ data: res.data });
+    }, (err) => {
+      console.log('error', err)
+    })
   }
   handleCommentSubmit(comment) {
     //add POST request
@@ -102,19 +105,22 @@ handleSubmit(e) {
 //...
 ```
 
-...and add in our Axios post method:
+...and add in our post method:
 
 ```js
 //CommentBox.js
 //....
 handleCommentSubmit(comment) {
-  axios.post(this.props.url, comment)
-    .then(res => {
-      this.setState({ data: res });
-    })
-    .catch(err => {
-      console.error(err);
-    });
+  $.ajax({
+    method: 'POST',
+    url: this.props.url,
+    data: comment
+  })
+  .then((res) => {
+    this.setState({ data: res });
+  }, (err) => {
+    console.error('post error', err);
+  });
 }
 ```
 
@@ -128,11 +134,15 @@ handleCommentSubmit(comment) {
   comment.id = Date.now();
   let newComments = comments.concat([comment]);
   this.setState({ data: newComments });
-  axios.post(this.props.url, comment)
-    .catch(err => {
-      console.error(err);
-      this.setState({ data: comments });
-    });
+  $.ajax({
+    method: 'POST',
+    url: this.props.url,
+    data: comment
+  })
+  .catch(err => {
+    console.error(err);
+    this.setState({ data: comments });
+  });
 }
 //...
 ```

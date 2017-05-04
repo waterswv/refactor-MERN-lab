@@ -41,21 +41,29 @@ Now, in CommentBox.js, we need to add update and delete handling:
 ```js
 //...
   handleCommentDelete(id) {
-    axios.delete(`${this.props.url}/${id}`)
-      .then(res => {
-        console.log('Comment deleted');
-      })
-      .catch(err => {
-        console.error(err);
-      });
+    $.ajax({
+      method: 'DELETE',
+      url: `${this.props.url}/${id}`
+    })
+    .then((res) => {
+      console.log('Comment deleted');
+    }, (err) => {
+      console.error(err);
+    });
   }
-  
+
     handleCommentUpdate(id, comment) {
     //sends the comment id and new author/text to our api
-    axios.put(`${this.props.url}/${id}`, comment)
-      .catch(err => {
-        console.log(err);
-      })
+    $.ajax({
+      method: 'put',
+      url: `${this.props.url}/${id}`,
+      data: comment
+    })
+    .then(res => {
+      console.log(res);
+    }, err => {
+      console.log(err);
+    })
   }
 //...
 ```

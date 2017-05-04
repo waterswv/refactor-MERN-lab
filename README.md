@@ -55,7 +55,7 @@ Make sure to run `npm install --save` to install dependencies!
 Take a look at `package.json`. What is familiar? What's new?
 
 * Mongoose, express, body-parser, and nodemon should be familiar.
-* Axios is a library that will let us use HTTP methods to communicate with our database.
+* jQuery is a library that will let us use HTTP methods to communicate with our database.
 * Foreman allows us to boot up our API and webpack-dev-server simultaneously.
 
 You will also notice that we're using a .js file for our styles, which has been provided for you. This is known as *modular inline css styling* and is alternative way to add style. You could also have done this with a .css file.
@@ -82,7 +82,7 @@ You will also notice that we're using a .js file for our styles, which has been 
 
 #### Sprint 5
 
- [Sprint 5: AJAX with Axios](docs/Sprint5.md)
+ [Sprint 5: AJAX](docs/Sprint5.md)
 
 #### Sprint 6
 
