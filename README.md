@@ -55,12 +55,29 @@ Make sure to run `npm install --save` to install dependencies!
 Take a look at `package.json`. What is familiar? What's new?
 
 * Mongoose, express, body-parser, and nodemon should be familiar.
-* Axios is a library that will let us use HTTP methods to communicate with our database.
+* jQuery is a library that will let us use HTTP methods to communicate with our database.
 * Foreman allows us to boot up our API and webpack-dev-server simultaneously.
 
 You will also notice that we're using a .js file for our styles, which has been provided for you. This is known as *modular inline css styling* and is alternative way to add style. You could also have done this with a .css file.
 
 ![screenshot.png](screenshot.png)
+
+
+## Workflow - getting updates
+
+* In GitHub, copy the clone url of the class version of this repository.  Back in your Terminal, navigate to your local repository for this project. Run the following command (paste in the class repo clone url instead of typing `CLASS_REPO_CLONE_URL`):
+
+    ```sh
+    git remote add upstream CLASS_REPO_CLONE_URL
+    ```
+
+* In the future, if the class version of a branch gets updated, you can pull these updates directly from the `upstream` remote.  Try this now with the master branch:
+
+    ```sh
+    git checkout master
+    git pull upstream master
+    ```
+
 
 ## Sprints
 
@@ -82,7 +99,7 @@ You will also notice that we're using a .js file for our styles, which has been 
 
 #### Sprint 5
 
- [Sprint 5: AJAX with Axios](docs/Sprint5.md)
+ [Sprint 5: AJAX](docs/Sprint5.md)
 
 #### Sprint 6
 

@@ -33,14 +33,17 @@ Finally, in the CommentBox component, make sure we appropriately access the righ
 ```js
 ...
 loadCommentsFromServer(){
-  axios.get(this.props.url)
-    .then(res => {
-      this.setState({ data: res.data.comments });
-    })
+  $.ajax({
+    method: 'GET',
+    url: this.props.url
+  })
+  .then(res => {
+    this.setState({ data: res.data.comments });
+  })
 }
 ...
 ```
 
 Now, you can run `npm start` to hit a real live backend!
 
-Now, note that the API code in our server.js is being replaced by the backend endpoint, so we no longer need that. Axios is taking care of hitting our backend for us! Feel free to refactor and/or remove the API portion of this lab to prove it to yourself.
+Now, note that the API code in our server.js is being replaced by the backend endpoint, so we no longer need that. The AJAX call is taking care of hitting our backend for us! Feel free to refactor and/or remove the API portion of this lab to prove it to yourself.
