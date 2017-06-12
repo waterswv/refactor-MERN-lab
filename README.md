@@ -91,4 +91,4 @@ You will also notice that we're using a .js file for our styles, which has been 
 
  #### Sprint 7
 
-  [Sprint 7: ...with a real backend](docs/Sprint7.md)
+  [Sprint 7: ...with an external backend](docs/Sprint7.md)

@@ -1,6 +1,6 @@
-## Sprint 7: Using a real backend
+## Sprint 7: Using an external backend
 
-If we wanted to deploy to Heroku, we'd actually want to hook up our React app to a separate backend, instead of just running Mongo locally. In other words, we'd have TWO Heroku endpoints for our app: one for the React frontend that runs all our React code and client-facing material, and one that is just a backend API endpoint that we can hit.
+Now we'd like to demonstrate how it is possible to use an external/independent backend with your existing front-end.
 
 We've already created a backend Heroku endpoint for you:
 https://mern-comment-box-api.herokuapp.com
@@ -8,17 +8,15 @@ https://mern-comment-box-api.herokuapp.com
 You can see the comments at:
 https://mern-comment-box-api.herokuapp.com/comments
 
-..and you may reset the backend by hitting:
+...and you may reset the backend by hitting:
  https://mern-comment-box-api.herokuapp.com/reset
 
- The repo for this backend is here:
+The repo for this backend is here:
  https://github.com/SF-WDI-LABS/comment-box-api
 
- Let's change our React app to hit this endpoint.
+Let's change our React app to hit this endpoint.
 
-
-
-Now, when we render our comment box, we can use this:
+Now, when we render our comment box, we can use the new endpoint instead:
 
 ```js
 ReactDOM.render(
@@ -46,4 +44,4 @@ loadCommentsFromServer(){
 
 Now, you can run `npm start` to hit a real live backend!
 
-Now, note that the API code in our server.js is being replaced by the backend endpoint, so we no longer need that. The AJAX call is taking care of hitting our backend for us! Feel free to refactor and/or remove the API portion of this lab to prove it to yourself.
+Now, note that the API code in our `server.js` is being replaced by the backend endpoint, so we no longer need that. The AJAX call is taking care of hitting our backend for us! Feel free to refactor and/or remove the API portion of this lab to prove it to yourself.
