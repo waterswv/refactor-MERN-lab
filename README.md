@@ -29,8 +29,8 @@ Clone this repo down and take a look at the file structure.
 By the end of this lesson, your file structure should end up looking like so:
 
 ```
-- model
-  - comments.js
+- models
+  - comment.js
 - node_modules
   - ...various modules...
 - src
