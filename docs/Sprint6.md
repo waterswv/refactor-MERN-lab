@@ -52,7 +52,7 @@ Now, in CommentBox.js, we need to add update and delete handling:
     });
   }
 
-    handleCommentUpdate(id, comment) {
+  handleCommentUpdate(id, comment) {
     //sends the comment id and new author/text to our api
     $.ajax({
       method: 'put',
