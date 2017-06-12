@@ -4,20 +4,20 @@ Check out `server.js`. Notice the mongoose connection?
 
 ```
 //db config
-//ADD YOUR INFO HERE!
-mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds115738.mlab.com:15738/mern-comment-box');
+mongoose.connect('mongodb://localhost/mern-comment-box');
 ```
 
-You'll need to go to MLabs (https://mlab.com/). Sign up if you haven't already. 
+That means that mongoose will create a new local database called "mern-comment-box". But we need MongoDB to be running!
 
-Once you have a username and password, we can integrate it into our server.js file.
-On your MLab page, you should see something such as this at the top:
+Open a new bash terminal window, and type:
 
-![img4.png](img4.png)
+``` bash
+mongod
+```
 
-You'll need the "using a driver via the standard MongoDB URI" option. Copy this into your server.js as shown in the code snippet above.
+Leave this process running in the background.
 
-Check out the Comment Schema in Models. 
+Now, check out the `CommentsSchema` in our models. 
 
-What are the properties of this? What are their types?
+What are the properties of a comment? What are their types?
 Check to make sure we've required this model in `server.js`.
