@@ -4,7 +4,7 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    Comment = require('./model/comments');
+    Comment = require('./models/comments');
 
 //create instances
 var app = express(),
