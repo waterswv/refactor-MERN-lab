@@ -50,7 +50,7 @@ By the end of this lesson, your file structure should end up looking like so:
 
 You'll need to create the missing files in the `src` directory to build out our front-end React components.
 
-Make sure to run `npm install --save` to install dependencies!
+Make sure to run `npm install` to install dependencies!
 
 Take a look at `package.json`. What is familiar? What's new?
 
