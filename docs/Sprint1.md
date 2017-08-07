@@ -2,7 +2,9 @@
 
 Let's go ahead and create some components!
 
-We'll need a basic comment box:
+
+
+### Build a basic comment box:
 
 <details>
   <summary>Build a react component that renders a `CommentList` and a `CommentForm`. Your component should have a `state` attribute called `data` (which should just be an empty array). You should pass daata into the `CommentList` as a `prop` called `data`</summary>
@@ -66,6 +68,8 @@ class CommentList extends Component {
 
 export default CommentList;
 ```
+
+
 
 We also need a basic Comment component with an Author and some stylized text:
 
