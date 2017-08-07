@@ -4,6 +4,12 @@ Let's go ahead and create some components!
 
 We'll need a basic comment box:
 
+<details>
+  <summary>Build a react component that renders a `CommentList` and a `CommentForm`. Your component should have a `state` attribute called `data` (which should just be an empty array). You should pass daata into the `CommentList` as a `prop` called `data`</summary>
+  
+
+
+
 ```js
 //CommentBox.js
 import React, { Component } from 'react';
@@ -21,8 +27,8 @@ class CommentBox extends Component {
     return (
       <div style={ style.commentBox }>
         <h2>Comments:</h2>
-      <CommentList data={ DATA }/>
-      <CommentForm />
+        <CommentList data={ DATA }/>
+        <CommentForm />
       </div>
     )
   }
@@ -30,6 +36,8 @@ class CommentBox extends Component {
 
 export default CommentBox;
 ```
+
+</details>
 
 Next, let's make a list of comments:
 
