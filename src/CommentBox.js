@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import CommentList from './CommentList';
-import CommentForm from './CommentForm'
+import CommentForm from './CommentForm';
 import DATA from '../data';
 import style from './style';
 
@@ -22,7 +22,7 @@ class CommentBox extends Component {
 
         <CommentList
           data={ DATA } />
-        <CommentFrom />
+        <CommentForm />
 
       </div>
     )
