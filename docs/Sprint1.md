@@ -7,7 +7,7 @@ Let's go ahead and create some components!
 ### Build a basic comment box:
 
 <details>
-  <summary>Build a react component that renders a `CommentList` and a `CommentForm`. Your component should have a `state` attribute called `data` (which should just be an empty array). You should pass daata into the `CommentList` as a `prop` called `data`</summary>
+  <summary>Build a React container component called <code>CommentBox</code> that renders a <code>CommentList</code> and a <code>CommentForm</code>. Your component should have a <code>state</code> attribute called <code>data</code> (which should just be an empty array). You should pass daata into the <code>CommentList</code> as a <code>prop</code> called <code>data</code> </summary>
   
 
 
@@ -41,7 +41,12 @@ export default CommentBox;
 
 </details>
 
-Next, let's make a list of comments:
+
+### Next, let's make a list of comments:
+
+<details>
+  <summary> This React component should be capable of rendering mulitple <code>Comment</code> components. To make this list of components use <a href="http://jasonjl.me/blog/2015/04/18/rendering-list-of-elements-in-react-with-jsx/">JavaScript's map function like in this article.</a> The style of the code in the sample below is slightly different than in the article. Both are acceptable syntax. </summary>
+  
 
 ```js
 //CommentList.js
@@ -69,11 +74,19 @@ class CommentList extends Component {
 export default CommentList;
 ```
 
+</details>
 
 
-We also need a basic Comment component with an Author and some stylized text:
 
-```js
+### Build a basic Comment component:
+
+<details>
+  <summary> This should be able to take in the basic information about a comment (author and text) in props and render them on the page.
+  
+  </summary>
+  
+  
+  ```js
 //Comment.js
 import React, { Component } from 'react';
 import style from './style';
@@ -97,7 +110,16 @@ class Comment extends Component {
 export default Comment;
 ```
 
-And finally, we definitely need a form for POSTing:
+</details>
+
+
+
+### Now we need a form for POSTing:
+
+<details>
+  <summary> This component, <code>CommentForm</code> should be a form capable of handling changes in the form fields so that the state of the component changes. The state should start as <code>this.state = { author: '', text: '' }</code>
+    
+  </summary>
 
 ```js
 //CommentForm.js
@@ -149,6 +171,8 @@ class CommentForm extends Component {
 
 export default CommentForm;
 ```
+
+</details>
 
 Take a moment to review these components. When is `state` used? when is `props` used? Which components are most associated with which CRUD actions?
 
