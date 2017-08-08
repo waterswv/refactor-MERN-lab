@@ -4,7 +4,7 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    Comment = require('./models/comment');
+    db = require('./models');
 
 //create instances
 var app = express(),
@@ -39,7 +39,7 @@ router.get('/', function(req,res) {
 
 // delete all comments
 router.route('/nuke').get(function(req,res){
-  Comment.remove(function(err,succ){
+  db.Comment.remove(function(err,succ){
   res.json(succ);
   });
 });
@@ -49,7 +49,7 @@ router.route('/comments')
   //retrieve all comments from the database
   .get(function(req, res) {
     //looks at our Comment Schema
-    Comment.find(function(err, comments) {
+    db.Comment.find(function(err, comments) {
       if (err)
         res.send(err);
       //responds with a json object of our database comments.
@@ -58,7 +58,7 @@ router.route('/comments')
   })
   //post new comment to the database
   .post(function(req, res) {
-    var comment = new Comment();
+    var comment = new db.Comment();
     //body parser lets us use the req.body
     comment.author = req.body.author;
     comment.text = req.body.text;
@@ -74,7 +74,7 @@ router.route('/comments')
 router.route('/comments/:comment_id')
 //The put method gives us the chance to update our comment based on the ID passed to the route
 .put(function(req, res) {
-  Comment.findById(req.params.comment_id, function(err, comment){
+  db.Comment.findById(req.params.comment_id, function(err, comment){
     if (err)
     res.send(err);
 
@@ -87,15 +87,15 @@ router.route('/comments/:comment_id')
       res.json({ message: 'Comment has been updated!'});
     });
   })
+})
   //delete method for removing a comment from our database
-  .delete(function(req, res) {
-    //selects the comment by its ID, then removes it.
-    Comment.remove({ _id: req.params.comment_id }, function(err, comment) {
-      if (err)
-        res.send(err);
-      res.json({ message: 'Comment has been deleted' })
-    })
-  });
+.delete(function(req, res) {
+  //selects the comment by its ID, then removes it.
+  db.Comment.remove({ _id: req.params.comment_id }, function(err, comment) {
+    if (err)
+      res.send(err);
+    res.json({ message: 'Comment has been deleted' })
+  })
 });
 
 //use router config when we call /API
