@@ -70,6 +70,16 @@ router.route('/comments')
     });
   });
 
+//adding the /comments/:comment_id route to our /api router
+router.route('/comments/:comment_id')
+//The put method gives us the chance to update our comment based on the ID passed to the route
+.put(function(req, res) {
+  Comment.findById(req.params.comment_id, function
+
+  )
+
+})
+
 //use router config when we call /API
 app.use('/api', router);
 
