@@ -1,4 +1,4 @@
-'use strict'
+'use strict' // WHAT IS THIS?
 
 //import dependencies
 var express = require('express'),
@@ -14,7 +14,7 @@ var app = express(),
 var port = process.env.API_PORT || 3001;
 
 //db config
-mongoose.connect('mongodb://localhost/mern-comment-box');
+mongoose.connect('mongodb://localhost/mern-comment-box'); // CAN THIS BE TACO? 
 
 //config API to use bodyParser and look for JSON in req.body
 app.use(bodyParser.urlencoded({extended: true }));
